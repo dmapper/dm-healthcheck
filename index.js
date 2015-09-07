@@ -1,6 +1,8 @@
-module.exports = function (req, res, next) {
-  if (req.path === '/healthcheck') {
-    return res.send(200);
+module.exports = function() {
+  return function (req, res, next) {
+    if (req.path === '/healthcheck') {
+      return res.res.status(200).end();
+    }
+    next();
   }
-  next();
 }
