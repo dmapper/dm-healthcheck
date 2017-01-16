@@ -1,8 +1,5 @@
 {
-  "name": "dm-healthcheck",
-  "publishConfig": {
-    "registry": "http://npm.idecisiongames.com/"
-  },
+  "name": "@dmapper/dm-healthcheck",
   "version": "0.1.2",
   "description": "",
   "main": "index.js",
