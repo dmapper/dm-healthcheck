@@ -5,7 +5,7 @@ module.exports = function() {
         console.warn('Attempted end response after headers were sent');
         next();
       } else {
-        res.status(200).send('OK');
+        res.status(200).end();
       }
     } else {
       next();
