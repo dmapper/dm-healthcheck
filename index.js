@@ -3,11 +3,12 @@ module.exports = function() {
     if (req.path === '/healthcheck') {
       if (res.headersSent) {
         console.warn('Attempted end response after headers were sent');
-        return next();
+        next();
       } else {
-        return res.status(200).end();
+        res.status(200).send('OK');
       }
+    } else {
+      next();
     }
-    next();
   }
 }
